@@ -14,6 +14,8 @@
 		BC58272D2AEAC922009840FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC58272B2AEAC922009840FB /* LaunchScreen.storyboard */; };
 		BC5827352AEAD0D6009840FB /* GHSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5827342AEAD0D6009840FB /* GHSearchViewController.swift */; };
 		BC5827372AEAD105009840FB /* GHFavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5827362AEAD105009840FB /* GHFavoritesListViewController.swift */; };
+		BC69A30D2AED00BF005AB436 /* GHButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69A30C2AED00BF005AB436 /* GHButton.swift */; };
+		BC69A30F2AED052F005AB436 /* GHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC69A30E2AED052F005AB436 /* GHTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BC58272E2AEAC922009840FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC5827342AEAD0D6009840FB /* GHSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHSearchViewController.swift; sourceTree = "<group>"; };
 		BC5827362AEAD105009840FB /* GHFavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHFavoritesListViewController.swift; sourceTree = "<group>"; };
+		BC69A30C2AED00BF005AB436 /* GHButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHButton.swift; sourceTree = "<group>"; };
+		BC69A30E2AED052F005AB436 /* GHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				BC5827292AEAC922009840FB /* Assets.xcassets */,
 				BC58272B2AEAC922009840FB /* LaunchScreen.storyboard */,
 				BC58272E2AEAC922009840FB /* Info.plist */,
+				BC69A30C2AED00BF005AB436 /* GHButton.swift */,
+				BC69A30E2AED052F005AB436 /* GHTextField.swift */,
 			);
 			path = GithubProject;
 			sourceTree = "<group>";
@@ -140,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC69A30D2AED00BF005AB436 /* GHButton.swift in Sources */,
 				BC5827372AEAD105009840FB /* GHFavoritesListViewController.swift in Sources */,
 				BC5827252AEAC921009840FB /* ViewController.swift in Sources */,
+				BC69A30F2AED052F005AB436 /* GHTextField.swift in Sources */,
 				BC5827212AEAC921009840FB /* AppDelegate.swift in Sources */,
 				BC5827232AEAC921009840FB /* SceneDelegate.swift in Sources */,
 				BC5827352AEAD0D6009840FB /* GHSearchViewController.swift in Sources */,
