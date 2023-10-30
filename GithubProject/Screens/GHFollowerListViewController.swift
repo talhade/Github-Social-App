@@ -15,6 +15,7 @@ class GHFollowerListViewController: UIViewController {
     
     var username: String!
     var followers: [Follower] = []
+    var filteredFollowers: [Follower] = []
     var page = 1
     var hasMoreFollowers = true
     
@@ -24,6 +25,7 @@ class GHFollowerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
+        configureSearchController()
         configureCollectionView()
         getFollowers(username: username, page: page)
         configureDataSource()
@@ -45,19 +47,39 @@ class GHFollowerListViewController: UIViewController {
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell .self, forCellWithReuseIdentifier: FollowerCell.reuseID)
-    }   
+    }
+    
+    func configureSearchController(){
+        let searchController = UISearchController()
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Search for a username"
+        searchController.searchBar.delegate = self
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        
+    }
     
     func getFollowers(username: String, page: Int){
         showLoadingView()
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
-            self?.dismissLoadingView()
+            guard let self = self else { return }
+            self.dismissLoadingView()
             switch result {
             case .success(let followers):
-                if followers.count < 100 { self?.hasMoreFollowers = false }
-                self?.followers.append(contentsOf: followers)
-                self?.updateData()
+                if followers.count < 100 { self.hasMoreFollowers = false }
+                self.followers.append(contentsOf: followers)
+                
+                if self.followers.isEmpty {
+                    let message = "This user doesn't have any followers. Go follow them 🙂"
+                    DispatchQueue.main.async {
+                        self.showEmptyStateView(with: message, view: self.view)
+                        return
+                    }
+                }
+                self.updateData(on: self.followers)
             case .failure(let error):
-                self?.presentGHAlertOnMainThread(title: "Error", message: error.rawValue, buttonTitle: "Ok")
+                self.presentGHAlertOnMainThread(title: "Error", message: error.rawValue, buttonTitle: "Ok")
             }
         }
     }
@@ -69,7 +91,7 @@ class GHFollowerListViewController: UIViewController {
             return cell
         })
     }
-    func updateData(){
+    func updateData(on followers: [Follower]){
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
@@ -96,3 +118,19 @@ extension GHFollowerListViewController: UICollectionViewDelegate {
     }
     
 }
+
+extension GHFollowerListViewController: UISearchResultsUpdating, UISearchBarDelegate{
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
+        filteredFollowers = followers.filter {
+            $0.login.lowercased().contains(filter.lowercased())
+        }
+        updateData(on: filteredFollowers)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        updateData(on: followers)
+    }
+}
+
+

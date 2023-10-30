@@ -14,6 +14,7 @@
 		BC0A9FDD2AEF999000C6AEAF /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A9FDC2AEF999000C6AEAF /* FollowerCell.swift */; };
 		BC0A9FDF2AEF9A7B00C6AEAF /* GHAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A9FDE2AEF9A7B00C6AEAF /* GHAvatarImageView.swift */; };
 		BC0A9FE12AEFB6A300C6AEAF /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A9FE02AEFB6A300C6AEAF /* UIHelper.swift */; };
+		BC0A9FEB2AEFD58700C6AEAF /* GHEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A9FEA2AEFD58700C6AEAF /* GHEmptyStateView.swift */; };
 		BC5827212AEAC921009840FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5827202AEAC921009840FB /* AppDelegate.swift */; };
 		BC5827232AEAC921009840FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5827222AEAC921009840FB /* SceneDelegate.swift */; };
 		BC58272A2AEAC922009840FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC5827292AEAC922009840FB /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		BC0A9FDC2AEF999000C6AEAF /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		BC0A9FDE2AEF9A7B00C6AEAF /* GHAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAvatarImageView.swift; sourceTree = "<group>"; };
 		BC0A9FE02AEFB6A300C6AEAF /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		BC0A9FEA2AEFD58700C6AEAF /* GHEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHEmptyStateView.swift; sourceTree = "<group>"; };
 		BC58271D2AEAC921009840FB /* GithubProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5827202AEAC921009840FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5827222AEAC921009840FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,55 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		BC0A9FE22AEFD47900C6AEAF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC69A3182AED211B005AB436 /* GHAlertViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BC0A9FE52AEFD4EB00C6AEAF /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				BC69A30C2AED00BF005AB436 /* GHButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		BC0A9FE62AEFD4F500C6AEAF /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				BC69A30E2AED052F005AB436 /* GHTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
+		BC0A9FE72AEFD50200C6AEAF /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				BC69A3142AED1EBB005AB436 /* GHTitleLabel.swift */,
+				BC69A3162AED2033005AB436 /* GHBodyLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		BC0A9FE82AEFD51F00C6AEAF /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				BC0A9FDE2AEF9A7B00C6AEAF /* GHAvatarImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		BC0A9FE92AEFD56800C6AEAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC0A9FEA2AEFD58700C6AEAF /* GHEmptyStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BC5827142AEAC921009840FB = {
 			isa = PBXGroup;
 			children = (
@@ -142,13 +193,13 @@
 		BC69A31D2AED2BFA005AB436 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				BC0A9FE92AEFD56800C6AEAF /* Views */,
+				BC0A9FE82AEFD51F00C6AEAF /* ImageViews */,
+				BC0A9FE72AEFD50200C6AEAF /* Labels */,
+				BC0A9FE62AEFD4F500C6AEAF /* TextFields */,
+				BC0A9FE52AEFD4EB00C6AEAF /* Buttons */,
+				BC0A9FE22AEFD47900C6AEAF /* ViewControllers */,
 				BC0A9FDB2AEF993B00C6AEAF /* Cells */,
-				BC69A3182AED211B005AB436 /* GHAlertViewController.swift */,
-				BC69A30C2AED00BF005AB436 /* GHButton.swift */,
-				BC69A30E2AED052F005AB436 /* GHTextField.swift */,
-				BC69A3142AED1EBB005AB436 /* GHTitleLabel.swift */,
-				BC69A3162AED2033005AB436 /* GHBodyLabel.swift */,
-				BC0A9FDE2AEF9A7B00C6AEAF /* GHAvatarImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -260,6 +311,7 @@
 				BC0A9FDF2AEF9A7B00C6AEAF /* GHAvatarImageView.swift in Sources */,
 				BC5827232AEAC921009840FB /* SceneDelegate.swift in Sources */,
 				BC5827352AEAD0D6009840FB /* GHSearchViewController.swift in Sources */,
+				BC0A9FEB2AEFD58700C6AEAF /* GHEmptyStateView.swift in Sources */,
 				BC69A3172AED2033005AB436 /* GHBodyLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
