@@ -10,6 +10,7 @@ import UIKit
 class GHItemInfoViewController: UIViewController {
     
     var user: User!
+    weak var delegate: UserInfoViewControllerDelegate!
     
     let stackView = UIStackView()
     let itemInfoViewOne = GHItemInfoView()
@@ -21,6 +22,7 @@ class GHItemInfoViewController: UIViewController {
         configureBackgroundView()
         layoutUI()
         configureStackView()
+        configureActionButton()
     }
     
     init(user: User){
@@ -46,6 +48,12 @@ class GHItemInfoViewController: UIViewController {
         
         
     }
+    
+    private func configureActionButton(){
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func actionButtonTapped(){ }
 
     private func layoutUI(){
         view.addSubview(stackView)
