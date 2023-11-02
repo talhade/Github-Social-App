@@ -16,6 +16,8 @@
 		BC0A9FEB2AEFD58700C6AEAF /* GHEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0A9FEA2AEFD58700C6AEAF /* GHEmptyStateView.swift */; };
 		BC4915A02AF3A4DA005DAB5E /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC49159F2AF3A4DA005DAB5E /* Date+Ext.swift */; };
 		BC4915A22AF3A51A005DAB5E /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4915A12AF3A51A005DAB5E /* String+Ext.swift */; };
+		BC4915A62AF3C5C8005DAB5E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4915A52AF3C5C8005DAB5E /* PersistenceManager.swift */; };
+		BC4915A82AF3D072005DAB5E /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4915A72AF3D072005DAB5E /* FavoriteTableViewCell.swift */; };
 		BC4DFC0F2AF0EFEB00C27076 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DFC0E2AF0EFEB00C27076 /* UserInfoViewController.swift */; };
 		BC4DFC112AF0FD6B00C27076 /* GHError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DFC102AF0FD6B00C27076 /* GHError.swift */; };
 		BC4DFC132AF100DF00C27076 /* GHUserInfoHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DFC122AF100DF00C27076 /* GHUserInfoHeaderViewController.swift */; };
@@ -50,6 +52,8 @@
 		BC0A9FEA2AEFD58700C6AEAF /* GHEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHEmptyStateView.swift; sourceTree = "<group>"; };
 		BC49159F2AF3A4DA005DAB5E /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		BC4915A12AF3A51A005DAB5E /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		BC4915A52AF3C5C8005DAB5E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		BC4915A72AF3D072005DAB5E /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		BC4DFC0E2AF0EFEB00C27076 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		BC4DFC102AF0FD6B00C27076 /* GHError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHError.swift; sourceTree = "<group>"; };
 		BC4DFC122AF100DF00C27076 /* GHUserInfoHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHUserInfoHeaderViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BC0A9FD62AEE57D300C6AEAF /* NetworkManager.swift */,
+				BC4915A52AF3C5C8005DAB5E /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				BC0A9FDC2AEF999000C6AEAF /* FollowerCell.swift */,
+				BC4915A72AF3D072005DAB5E /* FavoriteTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				BC4DFC1B2AF117C800C27076 /* GHItemInfoViewController.swift in Sources */,
 				BC69A30F2AED052F005AB436 /* GHTextField.swift in Sources */,
 				BC0A9FDD2AEF999000C6AEAF /* FollowerCell.swift in Sources */,
+				BC4915A82AF3D072005DAB5E /* FavoriteTableViewCell.swift in Sources */,
 				BC4DFC192AF1131100C27076 /* GHItemInfoView.swift in Sources */,
 				BC4DFC112AF0FD6B00C27076 /* GHError.swift in Sources */,
 				BC5827212AEAC921009840FB /* AppDelegate.swift in Sources */,
@@ -353,6 +360,7 @@
 				BC69A3132AED1686005AB436 /* GHFollowerListViewController.swift in Sources */,
 				BC0A9FD72AEE57D300C6AEAF /* NetworkManager.swift in Sources */,
 				BC4915A02AF3A4DA005DAB5E /* Date+Ext.swift in Sources */,
+				BC4915A62AF3C5C8005DAB5E /* PersistenceManager.swift in Sources */,
 				BC0A9FDF2AEF9A7B00C6AEAF /* GHAvatarImageView.swift in Sources */,
 				BC5827232AEAC921009840FB /* SceneDelegate.swift in Sources */,
 				BC5827352AEAD0D6009840FB /* GHSearchViewController.swift in Sources */,
