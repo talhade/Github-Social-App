@@ -20,37 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = createTabbar()
+        window?.rootViewController = GHTabBarController()
         window?.makeKeyAndVisible()
         configureNavbar()
     }
    
-    
-    func createSearchNC() -> UINavigationController {
-        let searchVC = GHSearchViewController()
-        searchVC.title = "Search"
-        searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        
-        return UINavigationController(rootViewController: searchVC)
-    }
-    
-    
-    func createFavoritesNC() -> UINavigationController {
-        let favoritesVC = GHFavoritesListViewController()
-        favoritesVC.title = "Favorites"
-        favoritesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-        
-        return UINavigationController(rootViewController: favoritesVC)
-    }
-    
-    func createTabbar() -> UITabBarController {
-        let tabbar = UITabBarController()
-        UITabBar.appearance().tintColor = .systemGreen
-        tabbar.viewControllers = [createSearchNC(), createFavoritesNC()]
-        
-        return tabbar
-    }
-    
     func configureNavbar(){
         UINavigationBar.appearance().tintColor = .systemGreen
     }
