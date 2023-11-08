@@ -49,9 +49,7 @@ class GHSearchViewController: UIViewController {
         
         usernameTextField.resignFirstResponder()
         
-        let followerListVC = GHFollowerListViewController()
-        followerListVC.username = usernameTextField.text
-        followerListVC.title = usernameTextField.text
+        let followerListVC = GHFollowerListViewController(username: usernameTextField.text!)
         navigationController?.pushViewController(followerListVC, animated: true)
     }
     
