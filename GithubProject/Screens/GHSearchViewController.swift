@@ -30,8 +30,8 @@ class GHSearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //navigationController?.isNavigationBarHidden = true
         navigationController?.setNavigationBarHidden(true, animated: true)
+        usernameTextField.text = ""
     }
     
     func createDismissKeyboardTapGesture(){
@@ -46,6 +46,9 @@ class GHSearchViewController: UIViewController {
                                         buttonTitle: "Ok")
             return
         }
+        
+        usernameTextField.resignFirstResponder()
+        
         let followerListVC = GHFollowerListViewController()
         followerListVC.username = usernameTextField.text
         followerListVC.title = usernameTextField.text
